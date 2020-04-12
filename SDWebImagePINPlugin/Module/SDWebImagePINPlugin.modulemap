@@ -1,0 +1,6 @@
+framework module SDWebImagePINPlugin {
+  umbrella header "SDWebImagePINPlugin.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,2 @@
+github "SDWebImage/SDWebImage" ~> 5.7
+github "pinterest/PINCache" >= 3.0.1-beta

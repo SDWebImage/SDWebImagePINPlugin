@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SDWebImagePINPlugin'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SDWebImagePINPlugin.'
+  s.summary          = 'A SDWebImage plugin to integrate PINCache for custom image caching.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,22 +21,18 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/lizhuoli1126@126.com/SDWebImagePINPlugin'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/SDWebImage/SDWebImagePINPlugin'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'lizhuoli1126@126.com' => 'lizhuoli1126@126.com' }
-  s.source           = { :git => 'https://github.com/lizhuoli1126@126.com/SDWebImagePINPlugin.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'DreamPiggy' => 'lizhuoli1126@126.com' }
+  s.source           = { :git => 'https://github.com/SDWebImage/SDWebImagePINPlugin.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '9.0'
+  s.osx.deployment_target = '10.11'
+  s.watchos.deployment_target = '2.0'
 
-  s.source_files = 'SDWebImagePINPlugin/Classes/**/*'
+  s.source_files = 'SDWebImagePINPlugin/Classes/**/*', 'SDWebImagePINPlugin/Module/SDWebImagePINPlugin.h'
   
-  # s.resource_bundles = {
-  #   'SDWebImagePINPlugin' => ['SDWebImagePINPlugin/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'SDWebImage/Core', '~> 5.7'
+  s.dependency 'PINCache', '>= 3.0.1-beta'
 end

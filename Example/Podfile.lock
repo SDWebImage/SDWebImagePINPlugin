@@ -1,0 +1,36 @@
+PODS:
+  - PINCache (3.0.1-beta.8):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.8)
+    - PINCache/Core (= 3.0.1-beta.8)
+  - PINCache/Arc-exception-safe (3.0.1-beta.8):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.8):
+    - PINOperation (~> 1.1.1)
+  - PINOperation (1.1.2)
+  - SDWebImage/Core (5.7.1)
+  - SDWebImagePINPlugin (0.1.0):
+    - PINCache (>= 3.0.1-beta)
+    - SDWebImage/Core (~> 5.7)
+
+DEPENDENCIES:
+  - SDWebImagePINPlugin (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - PINCache
+    - PINOperation
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  SDWebImagePINPlugin:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PINCache: 534fd41d358d828dfdf227a0d327f3673a65e20b
+  PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
+  SDWebImage: 5d4cf6afccd9ac1d2ee701ed0c4917cbb1b80536
+  SDWebImagePINPlugin: ff9d6dd5fe016a4310e59980fc216380669d6457
+
+PODFILE CHECKSUM: bb1e314b8eee5c8455323e62368a9faf53782750
+
+COCOAPODS: 1.8.4
