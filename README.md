@@ -11,11 +11,11 @@
 ## What's for
 SDWebImagePINPlugin is a plugin for [SDWebImage](https://github.com/rs/SDWebImage/) framework, which provide the image loading support for [PINCache](https://github.com/pinterest/PINCache) cache system.
 
-You also use `PINCache` instead of `SDImageCache` for image cache system, which may better memory cache performance (By taking advanced of LRU algorithm), and disk cache performance (By taking advanced of queue management and age/bytes LRU algorithm)
+You use `PINCache` instead of `SDImageCache` for image cache system, which may better memory cache performance (By taking advanced of LRU algorithm), and disk cache performance (By taking advanced of queue management and age/bytes LRU algorithm)
 
 ## Usage
 
-#### PINCache Plugin
+#### PINCache
 To enable `PINCache` instead of `SDImageCache`, you can bind the cache for shared manager, or create a custom manager instead.
 
 + Objective-C
@@ -31,6 +31,24 @@ SDWebImageManger.defaultImageCache = [PINCache cacheWithName:@"name"];
 // Use `PINCache` for shared manager
 SDWebImageManger.defaultImageCache = PINCache(name: "name")
 ```
+
+You can also attach the custom cache for individual image requests via `.imageCache` context option.
+
++ Objective-C
+
+```objectivec
+// Use `PINCache` for single URL request
+[imageView sd_setImageWithURL:url placeholderImage:nil options:0 context:@{SDWebImageContextImageCache: @(pinCache)} progress:nil completion:completion];
+```
+
++ Swift
+
+```swift
+// Use `PINCache` for single URL request
+imageView.sd_setImage(with: url, placeholderImage: nil, context: [.imageCache : pinCache], progress: nil, completion: completion);
+```
+
+### PINDiskCache && PINMemoryCache
 
 You can also use `PINMemoryCache` or `PINDiskcache` to customize memory cache / disk cache only. See [Custom Cache](https://github.com/rs/SDWebImage/wiki/Advanced-Usage#custom-cache-50) wiki in SDWebImage.
 
