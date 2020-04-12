@@ -1,10 +1,9 @@
-//
-//  SDAppDelegate.m
-//  SDWebImagePINPlugin
-//
-//  Created by lizhuoli1126@126.com on 04/12/2020.
-//  Copyright (c) 2020 lizhuoli1126@126.com. All rights reserved.
-//
+/*
+* This file is part of the SDWebImagePINPlugin package.
+*
+* For the full copyright and license information, please view the LICENSE
+* file that was distributed with this source code.
+*/
 
 #import "SDAppDelegate.h"
 

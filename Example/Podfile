@@ -1,13 +1,15 @@
-use_frameworks!
-
 platform :ios, '8.0'
+use_frameworks!
+inhibit_all_warnings!
+install! 'cocoapods', :share_schemes_for_development_pods => ['SDWebImagePINPlugin']
 
 target 'SDWebImagePINPlugin_Example' do
   pod 'SDWebImagePINPlugin', :path => '../'
+  pod 'PINCache'
 
   target 'SDWebImagePINPlugin_Tests' do
     inherit! :search_paths
-
+    pod 'Expecta'
     
   end
 end
