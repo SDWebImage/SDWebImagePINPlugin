@@ -1,14 +1,11 @@
-#ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#else
-#ifndef FOUNDATION_EXPORT
-#if defined(__cplusplus)
-#define FOUNDATION_EXPORT extern "C"
-#else
-#define FOUNDATION_EXPORT extern
-#endif
-#endif
-#endif
+/*
+* This file is part of the SDWebImage package.
+*
+* For the full copyright and license information, please view the LICENSE
+* file that was distributed with this source code.
+*/
+
+#import <Foundation/Foundation.h>
 
 #import <SDWebImagePINPlugin/PINCache+SDAdditions.h>
 #import <SDWebImagePINPlugin/PINMemoryCache+SDAdditions.h>

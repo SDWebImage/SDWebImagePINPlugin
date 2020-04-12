@@ -79,6 +79,10 @@ SDWebImageFLPlugin is available through [Carthage](https://github.com/Carthage/C
 github "SDWebImage/SDWebImagePINPlugin"
 ```
 
+Note: Carthage integration does not support watchOS platform. If you need watchOS, use CocoaPods instead.
+
+See tracked issue: [PINCache#268](https://github.com/pinterest/PINCache/issues/268)
+
 ## Author
 
 DreamPiggy, lizhuoli1126@126.com
