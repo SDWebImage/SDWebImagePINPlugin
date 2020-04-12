@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'SDWebImagePINPlugin_Example' do
+  pod 'SDWebImagePINPlugin', :path => '../'
+
+  target 'SDWebImagePINPlugin_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
