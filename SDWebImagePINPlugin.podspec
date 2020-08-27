@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SDWebImagePINPlugin'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A SDWebImage plugin to integrate PINCache for custom image caching.'
 
 # This description is used to generate tags and improve search results.
