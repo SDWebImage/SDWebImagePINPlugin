@@ -34,5 +34,5 @@ TODO: Add long description of the pod here.
   s.source_files = 'SDWebImagePINPlugin/Classes/**/*', 'SDWebImagePINPlugin/Module/SDWebImagePINPlugin.h'
   
   s.dependency 'SDWebImage/Core', '~> 5.7'
-  s.dependency 'PINCache', '>= 3.0.1-beta'
+  s.dependency 'PINCache', '>= 3.0.1'
 end
