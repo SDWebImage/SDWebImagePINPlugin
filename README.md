@@ -72,7 +72,7 @@ SDImageCacheConfig.default.diskCacheClass = PINDiskcache.self
 
 ## Requirements
 
-+ iOS 8+
++ iOS 9+
 + tvOS 9+
 + macOS 10.11+
 + watchOS 2.0+
