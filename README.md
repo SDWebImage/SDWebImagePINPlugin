@@ -92,7 +92,7 @@ pod 'SDWebImagePINPlugin'
 
 #### Carthage
 
-SDWebImageFLPlugin is available through [Carthage](https://github.com/Carthage/Carthage).
+SDWebImagePINPlugin is available through [Carthage](https://github.com/Carthage/Carthage).
 
 ```
 github "SDWebImage/SDWebImagePINPlugin"
@@ -100,7 +100,7 @@ github "SDWebImage/SDWebImagePINPlugin"
 
 #### Swift Package Manager (Xcode 11+)
 
-SDWebImagePhotosPlugin is available through [Swift Package Manager](https://swift.org/package-manager).
+SDWebImagePINPlugin is available through [Swift Package Manager](https://swift.org/package-manager).
 
 ```swift
 let package = Package(
