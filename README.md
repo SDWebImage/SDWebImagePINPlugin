@@ -5,6 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/SDWebImagePINPlugin.svg?style=flat)](https://cocoapods.org/pods/SDWebImagePINPlugin)
 [![Platform](https://img.shields.io/cocoapods/p/SDWebImagePINPlugin.svg?style=flat)](https://cocoapods.org/pods/SDWebImagePINPlugin)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/SDWebImage/SDWebImagePINPlugin)
+[![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
 [![codecov](https://codecov.io/gh/SDWebImage/SDWebImagePINPlugin/branch/master/graph/badge.svg)](https://codecov.io/gh/SDWebImage/SDWebImagePINPlugin)
 
 
@@ -95,6 +96,18 @@ SDWebImageFLPlugin is available through [Carthage](https://github.com/Carthage/C
 
 ```
 github "SDWebImage/SDWebImagePINPlugin"
+```
+
+#### Swift Package Manager (Xcode 11+)
+
+SDWebImagePhotosPlugin is available through [Swift Package Manager](https://swift.org/package-manager).
+
+```swift
+let package = Package(
+    dependencies: [
+        .package(url: "https://github.com/SDWebImage/SDWebImagePINPlugin.git", from: "0.3.0")
+    ]
+)
 ```
 
 ## Author
