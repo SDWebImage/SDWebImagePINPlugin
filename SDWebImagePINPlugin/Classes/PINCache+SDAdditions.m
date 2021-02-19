@@ -111,16 +111,18 @@ static NSData * SDPINPluginCacheDataWithImageData(UIImage *image, NSData *imageD
         
         @autoreleasepool {
             UIImage *diskImage;
-            SDImageCacheType cacheType = SDImageCacheTypeNone;
             if (image) {
                 // the image is from in-memory cache, but need image data
                 diskImage = image;
-                cacheType = SDImageCacheTypeMemory;
             } else if (diskData) {
-                cacheType = SDImageCacheTypeDisk;
+                BOOL shouldCacheToMomery = YES;
+                if (context[SDWebImageContextStoreCacheType]) {
+                    SDImageCacheType cacheType = [context[SDWebImageContextStoreCacheType] integerValue];
+                    shouldCacheToMomery = (cacheType == SDImageCacheTypeAll || cacheType == SDImageCacheTypeMemory);
+                }
                 // decode image data only if in-memory cache missed
                 diskImage = SDImageCacheDecodeImageData(diskData, key, options, context);
-                if (diskImage) {
+                if (shouldCacheToMomery && diskImage) {
                     // Check extended data
                     NSData *extendedData = [self.diskCache extendedDataForKey:key];
                     if (extendedData) {
@@ -154,10 +156,10 @@ static NSData * SDPINPluginCacheDataWithImageData(UIImage *image, NSData *imageD
             
             if (doneBlock) {
                 if (shouldQueryDiskSync) {
-                    doneBlock(diskImage, diskData, cacheType);
+                    doneBlock(diskImage, diskData, SDImageCacheTypeDisk);
                 } else {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        doneBlock(diskImage, diskData, cacheType);
+                        doneBlock(diskImage, diskData, SDImageCacheTypeDisk);
                     });
                 }
             }
